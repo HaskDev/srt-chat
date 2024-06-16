@@ -1,0 +1,240 @@
+.color-0{ color: #ffffff }
+.color-1{ color: #ff4444 }
+.color-2{ color: #99cc00 }
+.color-3{ color: #ffbb33 }
+.color-4{ color: #0099cc }
+.color-5{ color: #33b5e5 }
+.color-6{ color: #aa66cc }
+.color-8{ color: #cc0000 }
+.color-9{ color: #cc0068 }
+
+/* @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap'); */
+
+* {
+    font-family: Cabin;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 2px #000;
+}
+
+.no-grow {
+    flex-grow: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+#app {
+    font-family: Cabin;
+    -webkit-font-smoothiwssng: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+}
+
+.chat-window {
+    position: absolute;
+    top: 1.5%;
+    left: 0.8%;
+    width: 38%;
+    height: 30%;
+    font-weight: 500;
+    max-width: 1000px;
+    background-color: transparent !important;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+}
+
+
+.chat-messages {
+    position: relative;
+    height: 95%;
+    font-size: 1.8vh;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: 500;
+    margin: 1%;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.chat-input {
+    font-size: 1.65vh;
+    position: absolute;
+
+    top: 30.8%;
+    left: 0.8%;
+    width: 38%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+.prefix {
+    position: relative;
+    left: 1%;
+    top: 20.5px;
+    z-index: 10000;
+    font-size: 14px;
+    color: rgb(126, 255, 130);
+}
+
+input {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 400px;
+    padding: 13px 17px;
+    padding-left: 7px;
+    font-size: 13.5px;
+    height: 50px;
+    position: relative;
+    border: none;
+    border: 2px solid rgba(64, 63, 63, 0.5);
+    background-color: rgba(16, 16, 16, 0.65);
+    border-radius: 7px;
+    resize: none;
+    outline: none;
+    color: rgb(255,255,255);
+}
+
+input::placeholder {
+    color: rgb(0,200,200);
+    opacity: 69%;
+}
+
+input:focus, input:focus {
+    outline: none;
+}
+
+.msg {
+    margin-bottom: 0.28%;
+}
+
+.multiline {
+    margin-left: 4%;
+    text-indent: -1.2rem;
+    white-space: pre-line;
+}
+
+.suggestions {
+    position: relative;
+    left: 1.5px;
+    list-style-type: none;
+    padding: 0.5%;
+    padding-left: 1.4%;
+    font-size: 13.5px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 500;
+    border: 2px solid rgba(64, 63, 63, 0.5);
+    background-color: rgba(16, 16, 16, 0.65);
+    border-radius: 1.5px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 395px;
+}
+
+.help {
+    color: #b0bbbd;
+}
+
+.disabled {
+    color: #b0bbbd;
+}
+
+.suggestion {
+    margin-bottom: 0.5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.default_box {
+    position: relative;
+    display: flex;
+    font-size: 14px;
+    animation: show_chat_message .7s ease-in-out;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.default_box_container {
+    position: relative;
+    display: flex;
+}
+
+.default_box1 {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: rgb(28,28,30,.6);
+    color: #fff;
+}
+
+.default_box2 {
+    width: fit-content;
+    color: #fff;
+    background-color: rgb(0,0,0,.6);
+    padding: 5px 15px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.box_me {
+    background-color: rgb(255,100,100,.6);
+}
+
+.box_do {
+    background-color: rgb(45, 111, 253, .6);
+}
+
+.box_rem {
+    background-color: rgb(251, 168, 119, .6);
+}
+
+@keyframes show_chat_message {
+    from {
+        transform: translateX(-700px);
+        opacity: 0;
+        filter: blur(3px);
+    }
+}
+
+.chat-input {
+    animation: chatShow 200ms ease-in-out forwards;
+}
+
+@keyframes chatShow {
+    from {
+        transform: translateX(-250px) scale(50%);
+        filter: blur(5px);
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#top, #bottom {
+    transition: 1s;
+    height: 0%;
+    width: 100%;
+    background-color: #000;
+}
